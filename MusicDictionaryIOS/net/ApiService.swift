@@ -11,7 +11,7 @@ import Moya
 extension ApiService {
     
     // アーティスト取得
-    struct GetArtistList: LocalProvider {
+    struct GetArtistList: Provider {
         
         typealias Response = ArtistsFormResponse
         

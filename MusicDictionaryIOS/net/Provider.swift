@@ -72,7 +72,7 @@ class Api {
     }
 
     // API接続
-    func request<R>(_ request: R) -> Single<R.Response> where R: LocalProvider {
+    func request<R>(_ request: R) -> Single<R.Response> where R: Provider {
         requestId += 1
         let id = requestId
         let provider = defaultProvider
@@ -81,26 +81,26 @@ class Api {
         return provider.rx.request(target)
             .filterSuccessfulStatusCodes()
             .map(R.Response.self)
-//            // エラー処理
-//           .retryWhen{ (errors: Observable<Error>) in
-//                errors.enumerated().flatMap{ retryCount, err -> Observable<Void> in
-//                    Observable.create { observer in
-//                        // 想定内エラーはチェック
-//                        let flag: Bool = ErrorUseCase.shared.handlMoyaError(moyaError: err, requestId: id, retryCount: retryCount, observer: observer)
-//
-//                        if !flag {
-//                            ErrorUseCase.shared.hideErrorSureen(requestId: id)
-//                            observer.onError(err)
-//                        }
-//
-//                        return Disposables.create()
-//                    }
-//                }
-//            }
-//            // 成功処理
-//            .do(onSuccess: { _ in
-//                ErrorUseCase.shared.hideErrorSureen(requestId: id)
-//            })
+            // エラー処理
+           .retryWhen{ (errors: Observable<Error>) in
+                errors.enumerated().flatMap{ retryCount, err -> Observable<Void> in
+                    Observable.create { observer in
+                        // 想定内エラーはチェック
+                        let flag: Bool = ErrorUseCase.shared.handlMoyaError(moyaError: err, requestId: id, retryCount: retryCount, observer: observer)
+
+                        if !flag {
+                            ErrorUseCase.shared.hideErrorSureen(requestId: id)
+                            observer.onError(err)
+                        }
+
+                        return Disposables.create()
+                    }
+                }
+            }
+            // 成功処理
+            .do(onSuccess: { _ in
+                ErrorUseCase.shared.hideErrorSureen(requestId: id)
+            })
     }
 }
 
@@ -111,11 +111,11 @@ struct Response<T: Codable> : Codable {
 }
 
 // ローカルサーバー
-protocol LocalProvider: TargetType {
+protocol Provider: TargetType {
     associatedtype Response: Codable
 }
-extension LocalProvider {
-    var baseURL: URL { return URL(string: "http://localhost:3000")! }
+extension Provider {
+    var baseURL: URL { return URL(string: PropertyUtil.shared.prop.baseUrl)! }
     var headers: [String : String]? { return nil }
     var sampleData: Data {
         let path = Bundle.main.path(forResource: "samples", ofType: "json")!
