@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xWf-Md-Gfk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="j77-sE-w0R">
+            <objects>
+                <viewController id="2Uw-gW-313" customClass="HomeViewController" customModule="MusicDictionaryIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r8V-PW-Yco">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="home_background" translatesAutoresizingMaskIntoConstraints="NO" id="lJL-yR-OOo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mucis Dictionary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0c-5a-b2O">
+                                <rect key="frame" x="82" y="104" width="250" height="38.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" name="header_color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJO-Pw-I0V" userLabel="top_contaner">
+                                <rect key="frame" x="20" y="226.5" width="374" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2d-dL-DKW" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="160"/>
+                                        <color key="backgroundColor" name="colorPrimary"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <state key="normal" title="カテゴリ検索">
+                                            <color key="titleColor" name="header_color"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgu-Xy-XoW" userLabel="category_error" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twF-JS-nwR">
+                                                <rect key="frame" x="0.0" y="106" width="182" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="５件以上登録する必要があります">
+                                                    <color key="titleColor" name="error_text_color"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="enable_color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="twF-JS-nwR" secondAttribute="trailing" id="Jb8-S2-MzU"/>
+                                            <constraint firstItem="twF-JS-nwR" firstAttribute="leading" secondItem="pgu-Xy-XoW" secondAttribute="leading" id="XEG-Kl-IU1"/>
+                                            <constraint firstAttribute="bottom" secondItem="twF-JS-nwR" secondAttribute="bottom" constant="30" id="Zuv-C9-T9t"/>
+                                            <constraint firstAttribute="trailing" secondItem="twF-JS-nwR" secondAttribute="trailing" id="umm-ts-Sqh"/>
+                                            <constraint firstItem="twF-JS-nwR" firstAttribute="leading" secondItem="pgu-Xy-XoW" secondAttribute="leading" id="zHf-XR-vJD"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJD-Be-5Kn" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="192" y="0.0" width="182" height="160"/>
+                                        <color key="backgroundColor" name="colorPrimary"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <state key="normal" title="詳細検索">
+                                            <color key="titleColor" name="header_color"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwo-d9-shg" userLabel="detail_error" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="192" y="0.0" width="182" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyk-c8-adi">
+                                                <rect key="frame" x="0.0" y="106" width="182" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="３件以上登録する必要があります">
+                                                    <color key="titleColor" name="error_text_color"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="enable_color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="dyk-c8-adi" secondAttribute="trailing" id="EfN-LQ-nCY"/>
+                                            <constraint firstItem="dyk-c8-adi" firstAttribute="leading" secondItem="qwo-d9-shg" secondAttribute="leading" id="psj-Uq-XO2"/>
+                                            <constraint firstAttribute="bottom" secondItem="dyk-c8-adi" secondAttribute="bottom" constant="30" id="xC8-JV-pgB"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qwo-d9-shg" firstAttribute="leading" secondItem="pgu-Xy-XoW" secondAttribute="trailing" constant="10" id="0Lg-SN-6bc"/>
+                                    <constraint firstItem="J2d-dL-DKW" firstAttribute="top" secondItem="DJO-Pw-I0V" secondAttribute="top" id="2qE-IW-aNF"/>
+                                    <constraint firstItem="pgu-Xy-XoW" firstAttribute="leading" secondItem="DJO-Pw-I0V" secondAttribute="leading" id="5oU-bN-6IX"/>
+                                    <constraint firstItem="qwo-d9-shg" firstAttribute="top" secondItem="DJO-Pw-I0V" secondAttribute="top" id="5ue-l0-zKE"/>
+                                    <constraint firstAttribute="height" constant="160" id="8cj-F3-7kc"/>
+                                    <constraint firstAttribute="bottom" secondItem="qwo-d9-shg" secondAttribute="bottom" id="Bgy-Cg-yg0"/>
+                                    <constraint firstItem="pgu-Xy-XoW" firstAttribute="top" secondItem="DJO-Pw-I0V" secondAttribute="top" id="BvQ-EI-qmE"/>
+                                    <constraint firstItem="eJD-Be-5Kn" firstAttribute="top" secondItem="DJO-Pw-I0V" secondAttribute="top" id="OdJ-Ya-dDY"/>
+                                    <constraint firstItem="eJD-Be-5Kn" firstAttribute="leading" secondItem="J2d-dL-DKW" secondAttribute="trailing" constant="10" id="QZl-ht-7TH"/>
+                                    <constraint firstAttribute="bottom" secondItem="J2d-dL-DKW" secondAttribute="bottom" id="YAh-Ar-ahl"/>
+                                    <constraint firstAttribute="trailing" secondItem="eJD-Be-5Kn" secondAttribute="trailing" id="ZRp-GM-q1A"/>
+                                    <constraint firstItem="qwo-d9-shg" firstAttribute="width" secondItem="pgu-Xy-XoW" secondAttribute="width" id="a00-eN-4ow"/>
+                                    <constraint firstAttribute="trailing" secondItem="qwo-d9-shg" secondAttribute="trailing" id="ea1-1U-dC5"/>
+                                    <constraint firstItem="eJD-Be-5Kn" firstAttribute="height" secondItem="J2d-dL-DKW" secondAttribute="height" id="pwS-mp-bOe"/>
+                                    <constraint firstAttribute="bottom" secondItem="pgu-Xy-XoW" secondAttribute="bottom" id="rjP-p6-Zj6"/>
+                                    <constraint firstItem="eJD-Be-5Kn" firstAttribute="width" secondItem="J2d-dL-DKW" secondAttribute="width" id="sdH-rL-yDd"/>
+                                    <constraint firstItem="J2d-dL-DKW" firstAttribute="leading" secondItem="DJO-Pw-I0V" secondAttribute="leading" id="yYK-7I-28o"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiL-Vt-LRA" userLabel="bottom_container">
+                                <rect key="frame" x="20" y="396.5" width="374" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bm-X8-FXe" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="160"/>
+                                        <color key="backgroundColor" name="colorPrimary"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <state key="normal" title="急上昇">
+                                            <color key="titleColor" name="header_color"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="giY-Y7-mpv" userLabel="soaring_error" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCW-t9-mvC">
+                                                <rect key="frame" x="0.0" y="106" width="183" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="７件以上登録する必要があります">
+                                                    <color key="titleColor" name="error_text_color"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="enable_color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KCW-t9-mvC" secondAttribute="trailing" id="0cj-6U-Ftt"/>
+                                            <constraint firstItem="KCW-t9-mvC" firstAttribute="leading" secondItem="giY-Y7-mpv" secondAttribute="leading" id="Aik-VA-tZP"/>
+                                            <constraint firstAttribute="trailing" secondItem="KCW-t9-mvC" secondAttribute="trailing" id="CE7-KE-TJO"/>
+                                            <constraint firstItem="KCW-t9-mvC" firstAttribute="leading" secondItem="giY-Y7-mpv" secondAttribute="leading" id="eZC-gp-VDN"/>
+                                            <constraint firstAttribute="bottom" secondItem="KCW-t9-mvC" secondAttribute="bottom" constant="30" id="tko-sN-ynS"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdi-iD-zLC" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="192" y="0.0" width="182" height="160"/>
+                                        <color key="backgroundColor" name="colorPrimary"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <state key="normal" title="おすすめ">
+                                            <color key="titleColor" name="header_color"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcF-Wn-uct" userLabel="recommend_error" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="191" y="0.0" width="183" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvi-f4-dtY">
+                                                <rect key="frame" x="0.0" y="106" width="183" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <state key="normal" title="１０件以上登録する必要があります">
+                                                    <color key="titleColor" name="error_text_color"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="enable_color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Nvi-f4-dtY" secondAttribute="trailing" id="7Df-Uq-JZ9"/>
+                                            <constraint firstItem="Nvi-f4-dtY" firstAttribute="leading" secondItem="bcF-Wn-uct" secondAttribute="leading" id="NsO-K6-kA2"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nvi-f4-dtY" secondAttribute="trailing" id="Tzg-i1-PPO"/>
+                                            <constraint firstItem="Nvi-f4-dtY" firstAttribute="leading" secondItem="bcF-Wn-uct" secondAttribute="leading" id="ZfN-uN-4YY"/>
+                                            <constraint firstAttribute="bottom" secondItem="Nvi-f4-dtY" secondAttribute="bottom" constant="30" id="zWC-H0-8MH"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bdi-iD-zLC" secondAttribute="bottom" id="19F-qh-f5g"/>
+                                    <constraint firstAttribute="height" constant="160" id="4qi-ob-kxm"/>
+                                    <constraint firstItem="giY-Y7-mpv" firstAttribute="leading" secondItem="hiL-Vt-LRA" secondAttribute="leading" id="AJB-He-LGR"/>
+                                    <constraint firstItem="bdi-iD-zLC" firstAttribute="leading" secondItem="3bm-X8-FXe" secondAttribute="trailing" constant="10" id="F2a-ue-jLO"/>
+                                    <constraint firstItem="giY-Y7-mpv" firstAttribute="top" secondItem="hiL-Vt-LRA" secondAttribute="top" id="FP7-Db-LHp"/>
+                                    <constraint firstAttribute="trailing" secondItem="bdi-iD-zLC" secondAttribute="trailing" id="Ifh-Hs-Ipi"/>
+                                    <constraint firstAttribute="trailing" secondItem="bcF-Wn-uct" secondAttribute="trailing" id="JQC-Mz-9Ys"/>
+                                    <constraint firstItem="3bm-X8-FXe" firstAttribute="leading" secondItem="hiL-Vt-LRA" secondAttribute="leading" id="N5G-dD-STV"/>
+                                    <constraint firstItem="3bm-X8-FXe" firstAttribute="top" secondItem="hiL-Vt-LRA" secondAttribute="top" id="R0P-h1-F54"/>
+                                    <constraint firstAttribute="bottom" secondItem="3bm-X8-FXe" secondAttribute="bottom" id="SKE-or-8rd"/>
+                                    <constraint firstAttribute="bottom" secondItem="giY-Y7-mpv" secondAttribute="bottom" id="XID-DD-N9X"/>
+                                    <constraint firstItem="bdi-iD-zLC" firstAttribute="width" secondItem="3bm-X8-FXe" secondAttribute="width" id="cbI-nk-W6n"/>
+                                    <constraint firstItem="bcF-Wn-uct" firstAttribute="leading" secondItem="giY-Y7-mpv" secondAttribute="trailing" constant="8" id="gbq-fM-J9E"/>
+                                    <constraint firstItem="bcF-Wn-uct" firstAttribute="height" secondItem="giY-Y7-mpv" secondAttribute="height" id="pkz-LO-xta"/>
+                                    <constraint firstItem="bdi-iD-zLC" firstAttribute="top" secondItem="hiL-Vt-LRA" secondAttribute="top" id="rNu-dA-Plm"/>
+                                    <constraint firstItem="bcF-Wn-uct" firstAttribute="width" secondItem="giY-Y7-mpv" secondAttribute="width" id="skb-ld-1R2"/>
+                                    <constraint firstItem="bcF-Wn-uct" firstAttribute="top" secondItem="hiL-Vt-LRA" secondAttribute="top" id="vgT-bD-KGi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSF-ps-Kr3" userLabel="search_container">
+                                <rect key="frame" x="20" y="157.5" width="374" height="56"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="KJN-wO-0Fs">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuK-ok-Are" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="10" width="358" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="１件以上登録する必要があります" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmv-xL-nLU">
+                                                <rect key="frame" x="102" y="12" width="154" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" name="error_text_color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="enable_color"/>
+                                        <constraints>
+                                            <constraint firstItem="Wmv-xL-nLU" firstAttribute="centerX" secondItem="vuK-ok-Are" secondAttribute="centerX" id="BPy-ZX-RvJ"/>
+                                            <constraint firstItem="Wmv-xL-nLU" firstAttribute="centerY" secondItem="vuK-ok-Are" secondAttribute="centerY" id="fX6-Py-DA7"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vuK-ok-Are" secondAttribute="trailing" constant="8" id="07w-Yo-yJ0"/>
+                                    <constraint firstItem="KJN-wO-0Fs" firstAttribute="top" secondItem="pSF-ps-Kr3" secondAttribute="top" id="4RX-om-IFZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="vuK-ok-Are" secondAttribute="bottom" constant="10" id="5cw-Pw-71j"/>
+                                    <constraint firstAttribute="trailing" secondItem="KJN-wO-0Fs" secondAttribute="trailing" id="8Qh-vc-BnE"/>
+                                    <constraint firstAttribute="bottom" secondItem="KJN-wO-0Fs" secondAttribute="bottom" id="BZq-lf-YZJ"/>
+                                    <constraint firstItem="vuK-ok-Are" firstAttribute="leading" secondItem="pSF-ps-Kr3" secondAttribute="leading" constant="8" id="Rfx-58-Y19"/>
+                                    <constraint firstItem="KJN-wO-0Fs" firstAttribute="leading" secondItem="pSF-ps-Kr3" secondAttribute="leading" id="Vs3-28-Dia"/>
+                                    <constraint firstItem="vuK-ok-Are" firstAttribute="top" secondItem="pSF-ps-Kr3" secondAttribute="top" constant="10" id="r4I-o8-lqN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lJL-yR-OOo" firstAttribute="leading" secondItem="uej-EU-MJm" secondAttribute="leading" id="9va-qT-ebV"/>
+                            <constraint firstItem="uej-EU-MJm" firstAttribute="trailing" secondItem="pSF-ps-Kr3" secondAttribute="trailing" constant="20" id="FcD-O0-gfY"/>
+                            <constraint firstItem="hiL-Vt-LRA" firstAttribute="leading" secondItem="uej-EU-MJm" secondAttribute="leading" constant="20" id="H4s-r0-tdp"/>
+                            <constraint firstItem="lJL-yR-OOo" firstAttribute="bottom" secondItem="uej-EU-MJm" secondAttribute="bottom" id="NsS-9F-oWI"/>
+                            <constraint firstItem="DJO-Pw-I0V" firstAttribute="top" secondItem="R0c-5a-b2O" secondAttribute="bottom" constant="84" id="Q2m-VM-Ubf"/>
+                            <constraint firstItem="hiL-Vt-LRA" firstAttribute="top" secondItem="DJO-Pw-I0V" secondAttribute="bottom" constant="10" id="Scb-wF-qLz"/>
+                            <constraint firstItem="uej-EU-MJm" firstAttribute="trailing" secondItem="DJO-Pw-I0V" secondAttribute="trailing" constant="20" id="VJU-86-yh7"/>
+                            <constraint firstItem="uej-EU-MJm" firstAttribute="trailing" secondItem="hiL-Vt-LRA" secondAttribute="trailing" constant="20" id="XLj-KW-qSw"/>
+                            <constraint firstItem="pSF-ps-Kr3" firstAttribute="top" secondItem="R0c-5a-b2O" secondAttribute="bottom" constant="15" id="Xmk-Zs-ESa"/>
+                            <constraint firstItem="R0c-5a-b2O" firstAttribute="top" secondItem="uej-EU-MJm" secondAttribute="top" constant="16" id="aLQ-2C-B8p"/>
+                            <constraint firstItem="R0c-5a-b2O" firstAttribute="centerX" secondItem="r8V-PW-Yco" secondAttribute="centerX" id="eHu-Xi-Qgn"/>
+                            <constraint firstItem="DJO-Pw-I0V" firstAttribute="leading" secondItem="uej-EU-MJm" secondAttribute="leading" constant="20" id="fxn-8m-ghV"/>
+                            <constraint firstItem="pSF-ps-Kr3" firstAttribute="leading" secondItem="uej-EU-MJm" secondAttribute="leading" constant="20" id="iWT-9b-I75"/>
+                            <constraint firstItem="lJL-yR-OOo" firstAttribute="leading" secondItem="uej-EU-MJm" secondAttribute="leading" id="jCj-T6-c5F"/>
+                            <constraint firstItem="lJL-yR-OOo" firstAttribute="trailing" secondItem="uej-EU-MJm" secondAttribute="trailing" id="vV6-9I-gGJ"/>
+                            <constraint firstItem="lJL-yR-OOo" firstAttribute="top" secondItem="r8V-PW-Yco" secondAttribute="top" id="zDQ-hU-rTs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uej-EU-MJm"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Rrb-rD-d1F"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="categoryButton" destination="J2d-dL-DKW" id="EGU-uW-GBW"/>
+                        <outlet property="categoryErrorView" destination="pgu-Xy-XoW" id="Zhl-pc-D2j"/>
+                        <outlet property="detailButton" destination="eJD-Be-5Kn" id="Mzn-em-c1h"/>
+                        <outlet property="detailsErrorView" destination="qwo-d9-shg" id="tzO-2J-DlR"/>
+                        <outlet property="recommendButton" destination="bdi-iD-zLC" id="8xz-cF-nEz"/>
+                        <outlet property="recommendErrorView" destination="bcF-Wn-uct" id="221-Ad-wpt"/>
+                        <outlet property="searchBar" destination="KJN-wO-0Fs" id="rcI-Zb-cqZ"/>
+                        <outlet property="searchErrorView" destination="vuK-ok-Are" id="0hE-7S-3Iq"/>
+                        <outlet property="soaringButton" destination="3bm-X8-FXe" id="MbD-8N-mnq"/>
+                        <outlet property="soaringErrorView" destination="giY-Y7-mpv" id="c1W-tz-XE1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UdX-tG-AYT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718.84057971014499" y="32.8125"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="DWP-MN-XyZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xWf-Md-Gfk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="N7S-6O-JjR"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OdX-ie-XJV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2Uw-gW-313" kind="relationship" relationship="rootViewController" id="Fkl-2O-bC3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5i-Az-S4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191.30434782608697" y="32.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_background" width="320" height="540"/>
+        <namedColor name="colorPrimary">
+            <color red="0.37647058823529411" green="0.49019607843137253" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="enable_color">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="0.57959936761856079" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="error_text_color">
+            <color red="0.69019607843137254" green="0.0" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="header_color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

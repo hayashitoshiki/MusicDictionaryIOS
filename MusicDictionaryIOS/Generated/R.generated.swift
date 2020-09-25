@@ -89,12 +89,21 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
+    /// Storyboard `Home`.
+    static let home = _R.storyboard.home()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "Home", bundle: ...)`
+    static func home(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.home)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
@@ -114,7 +123,7 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 12 colors.
+  /// This `R.color` struct is generated, and contains static references to 13 colors.
   struct color {
     /// Color `colorAccent`.
     static let colorAccent = Rswift.ColorResource(bundle: R.hostingBundle, name: "colorAccent")
@@ -122,6 +131,8 @@ struct R: Rswift.Validatable {
     static let colorPrimaryDark = Rswift.ColorResource(bundle: R.hostingBundle, name: "colorPrimaryDark")
     /// Color `colorPrimary`.
     static let colorPrimary = Rswift.ColorResource(bundle: R.hostingBundle, name: "colorPrimary")
+    /// Color `enable_color`.
+    static let enable_color = Rswift.ColorResource(bundle: R.hostingBundle, name: "enable_color")
     /// Color `error_text_color`.
     static let error_text_color = Rswift.ColorResource(bundle: R.hostingBundle, name: "error_text_color")
     /// Color `gray_300`.
@@ -165,6 +176,15 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func colorPrimaryDark(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.colorPrimaryDark, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "enable_color", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func enable_color(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.enable_color, compatibleWith: traitCollection)
     }
     #endif
 
@@ -282,6 +302,21 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.image` struct is generated, and contains static references to 1 images.
+  struct image {
+    /// Image `home_background`.
+    static let home_background = Rswift.ImageResource(bundle: R.hostingBundle, name: "home_background")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "home_background", bundle: ..., traitCollection: ...)`
+    static func home_background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.home_background, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
   /// This `R.info` struct is generated, and contains static references to 1 properties.
   struct info {
     struct uiApplicationSceneManifest {
@@ -337,12 +372,36 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
+      try home.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
       try launchScreen.validate()
       #endif
       #if os(iOS) || os(tvOS)
       try main.validate()
       #endif
     }
+
+    #if os(iOS) || os(tvOS)
+    struct home: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UINavigationController
+
+      let bundle = R.hostingBundle
+      let name = "Home"
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "home_background", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'home_background' is used in storyboard 'Home', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "colorPrimary", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'colorPrimary' is used in storyboard 'Home', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "enable_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'enable_color' is used in storyboard 'Home', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "error_text_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'error_text_color' is used in storyboard 'Home', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "header_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'header_color' is used in storyboard 'Home', but couldn't be loaded.") }
+        }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -362,7 +421,7 @@ struct _R: Rswift.Validatable {
 
     #if os(iOS) || os(tvOS)
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = HomeViewController
+      typealias InitialController = UIKit.UITabBarController
 
       let bundle = R.hostingBundle
       let name = "Main"

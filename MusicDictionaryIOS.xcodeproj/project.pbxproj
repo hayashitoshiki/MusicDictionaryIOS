@@ -28,6 +28,11 @@
 		3666CA82251B7A5A001FF648 /* app-develop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3666CA80251B7A5A001FF648 /* app-develop.plist */; };
 		3666CA83251B7A5A001FF648 /* app-staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3666CA81251B7A5A001FF648 /* app-staging.plist */; };
 		3666CA8B251B82BA001FF648 /* app.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3666CA8A251B82BA001FF648 /* app.plist */; };
+		3666CA8D251C3172001FF648 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3666CA8C251C3172001FF648 /* Home.storyboard */; };
+		3666CA8F251C7954001FF648 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666CA8E251C7954001FF648 /* UserDefaultsRepository.swift */; };
+		3666CA97251D8228001FF648 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666CA96251D8228001FF648 /* RoundedButton.swift */; };
+		3666CA9A251DC1BD001FF648 /* UISearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666CA99251DC1BD001FF648 /* UISearchBar+Extension.swift */; };
+		3666CA9C251DC32B001FF648 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666CA9B251DC32B001FF648 /* UIColor+Extension.swift */; };
 		C8917F6FF597D69FCE9EB77B /* Pods_MusicDictionaryIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19327F682E6FBE5B3A22B78 /* Pods_MusicDictionaryIOSTests.framework */; };
 		CD526F9AA34C80C3A3FB1AF2 /* Pods_MusicDictionaryIOS_MusicDictionaryIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEF1E05683601493C1F9F5B /* Pods_MusicDictionaryIOS_MusicDictionaryIOSUITests.framework */; };
 		FB1B9A722DDE6AF12EC33813 /* Pods_MusicDictionaryIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B866B2E3614506157AE89701 /* Pods_MusicDictionaryIOS.framework */; };
@@ -83,6 +88,11 @@
 		3666CA80251B7A5A001FF648 /* app-develop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "app-develop.plist"; path = "Resource/app-develop.plist"; sourceTree = "<group>"; };
 		3666CA81251B7A5A001FF648 /* app-staging.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "app-staging.plist"; path = "Resource/app-staging.plist"; sourceTree = "<group>"; };
 		3666CA8A251B82BA001FF648 /* app.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = app.plist; sourceTree = "<group>"; };
+		3666CA8C251C3172001FF648 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		3666CA8E251C7954001FF648 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
+		3666CA96251D8228001FF648 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		3666CA99251DC1BD001FF648 /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extension.swift"; sourceTree = "<group>"; };
+		3666CA9B251DC32B001FF648 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7DAEA2F9F762013C1DA407B9 /* Pods-MusicDictionaryIOS.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicDictionaryIOS.staging.xcconfig"; path = "Target Support Files/Pods-MusicDictionaryIOS/Pods-MusicDictionaryIOS.staging.xcconfig"; sourceTree = "<group>"; };
 		9163A1BFBC8D4E76BB1EF619 /* Pods-MusicDictionaryIOSTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicDictionaryIOSTests.staging.xcconfig"; path = "Target Support Files/Pods-MusicDictionaryIOSTests/Pods-MusicDictionaryIOSTests.staging.xcconfig"; sourceTree = "<group>"; };
 		97400FC0F1281E0E0C4DC73A /* Pods-MusicDictionaryIOS.develop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicDictionaryIOS.develop.xcconfig"; path = "Target Support Files/Pods-MusicDictionaryIOS/Pods-MusicDictionaryIOS.develop.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				3660BD8B251B211400ED8241 /* ApiServiceRepository.swift */,
+				3666CA8E251C7954001FF648 /* UserDefaultsRepository.swift */,
 			);
 			name = repository;
 			sourceTree = "<group>";
@@ -221,6 +232,8 @@
 				3660BD53251B1F0100ED8241 /* Main.storyboard */,
 				3660BD58251B1F0100ED8241 /* LaunchScreen.storyboard */,
 				3660BD93251B2CCC00ED8241 /* home */,
+				3666CA95251D8199001FF648 /* custom */,
+				3666CA98251DC174001FF648 /* Extension */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -239,8 +252,9 @@
 		3660BD93251B2CCC00ED8241 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				3660BD8E251B215300ED8241 /* HomeViewModel.swift */,
+				3666CA8C251C3172001FF648 /* Home.storyboard */,
 				3660BD90251B216F00ED8241 /* HomeViewController.swift */,
+				3660BD8E251B215300ED8241 /* HomeViewModel.swift */,
 			);
 			name = home;
 			sourceTree = "<group>";
@@ -260,6 +274,23 @@
 				3660BDA4251B3C1900ED8241 /* PropertyUtil.swift */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		3666CA95251D8199001FF648 /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				3666CA96251D8228001FF648 /* RoundedButton.swift */,
+			);
+			path = custom;
+			sourceTree = "<group>";
+		};
+		3666CA98251DC174001FF648 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3666CA99251DC1BD001FF648 /* UISearchBar+Extension.swift */,
+				3666CA9B251DC32B001FF648 /* UIColor+Extension.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		401EDC5D04FA99F417034800 /* Pods */ = {
@@ -366,6 +397,7 @@
 				TargetAttributes = {
 					3660BD49251B1F0000ED8241 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 					3660BD5F251B1F0100ED8241 = {
 						CreatedOnToolsVersion = 11.5;
@@ -402,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3666CA8D251C3172001FF648 /* Home.storyboard in Resources */,
 				3666CA83251B7A5A001FF648 /* app-staging.plist in Resources */,
 				3660BD5A251B1F0100ED8241 /* LaunchScreen.storyboard in Resources */,
 				3660BD57251B1F0100ED8241 /* Assets.xcassets in Resources */,
@@ -578,7 +611,11 @@
 				3660BD82251B201C00ED8241 /* Provider.swift in Sources */,
 				3660BD8A251B20DD00ED8241 /* ArtistsForm.swift in Sources */,
 				3660BD8F251B215300ED8241 /* HomeViewModel.swift in Sources */,
+				3666CA9C251DC32B001FF648 /* UIColor+Extension.swift in Sources */,
+				3666CA97251D8228001FF648 /* RoundedButton.swift in Sources */,
+				3666CA8F251C7954001FF648 /* UserDefaultsRepository.swift in Sources */,
 				3660BD84251B203500ED8241 /* MoyaCacheablePlugin.swift in Sources */,
+				3666CA9A251DC1BD001FF648 /* UISearchBar+Extension.swift in Sources */,
 				3660BD52251B1F0000ED8241 /* ViewController.swift in Sources */,
 				3660BDA9251B466900ED8241 /* R.generated.swift in Sources */,
 				3660BD4E251B1F0000ED8241 /* AppDelegate.swift in Sources */,
@@ -760,6 +797,7 @@
 			baseConfigurationReference = D7569079AA6318D0EF156282 /* Pods-MusicDictionaryIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MusicDictionaryIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -768,6 +806,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sampel1.MusicDictionaryIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -778,6 +817,7 @@
 			baseConfigurationReference = F0940702676F262E949CDD18 /* Pods-MusicDictionaryIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MusicDictionaryIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -940,6 +980,7 @@
 			baseConfigurationReference = 97400FC0F1281E0E0C4DC73A /* Pods-MusicDictionaryIOS.develop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MusicDictionaryIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -948,6 +989,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sampel1.MusicDictionaryIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1060,6 +1102,7 @@
 			baseConfigurationReference = 7DAEA2F9F762013C1DA407B9 /* Pods-MusicDictionaryIOS.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MusicDictionaryIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1068,6 +1111,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sampel1.MusicDictionaryIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

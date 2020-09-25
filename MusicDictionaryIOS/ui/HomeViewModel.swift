@@ -7,14 +7,44 @@
 //
 
 import Foundation
+import RxCocoa
 import RxSwift
 import Alamofire
 
 class HomeViewModel {
     
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     private let apiServiceRepository = ApiServiceRepositoryImp()
+    private let userDefaultsRepository = UserDefaultsRepositoryImp()
     
+    let isCategoryButtonEnabled = BehaviorRelay<Bool>(value: true)
+    let isDetailButtonEnabled = BehaviorRelay<Bool>(value: true)
+    let isSoaringButtonEnabled = BehaviorRelay<Bool>(value: true)
+    let isRecommendButtonEnabled = BehaviorRelay<Bool>(value: true)
+    
+    init() {
+        // ボタンの活性・非活性初期化
+        let count = userDefaultsRepository.getCount()
+        
+        if count == 0 {
+            
+        }
+        if count < 3 {
+            isCategoryButtonEnabled.accept(false)
+        }
+        if count < 5 {
+            isDetailButtonEnabled.accept(false)
+        }
+        if count < 7 {
+            isSoaringButtonEnabled.accept(false)
+        }
+        if count < 10 {
+            isRecommendButtonEnabled.accept(false)
+        }
+        
+    }
+    
+    // アーティスト取得
     func getArtists() {
         apiServiceRepository.getArtist()
         .subscribe(
