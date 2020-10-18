@@ -348,6 +348,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `resultTableCell`.
+    static let resultTableCell: Rswift.ReuseIdentifier<ResultTableViewCell> = Rswift.ReuseIdentifier(identifier: "resultTableCell")
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -396,6 +404,8 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "enable_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'enable_color' is used in storyboard 'Home', but couldn't be loaded.") }
           if UIKit.UIColor(named: "error_text_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'error_text_color' is used in storyboard 'Home', but couldn't be loaded.") }
           if UIKit.UIColor(named: "header_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'header_color' is used in storyboard 'Home', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "main_text_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'main_text_color' is used in storyboard 'Home', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "sub_text_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'sub_text_color' is used in storyboard 'Home', but couldn't be loaded.") }
         }
       }
 

@@ -14,7 +14,6 @@ import Alamofire
 class HomeViewModel {
     
     private let disposeBag = DisposeBag()
-    private let apiServiceRepository = ApiServiceRepositoryImp()
     private let userDefaultsRepository = UserDefaultsRepositoryImp()
     
     let isCategoryButtonEnabled = BehaviorRelay<Bool>(value: true)
@@ -42,23 +41,6 @@ class HomeViewModel {
             isRecommendButtonEnabled.accept(false)
         }
         
-    }
-    
-    // アーティスト取得
-    func getArtists() {
-        apiServiceRepository.getArtist()
-        .subscribe(
-            onSuccess: { [unowned self] data in
-                print("success")
-                print(data)
-
-        },
-            onError: { [unowned self] error in
-                print("error")
-                print(error)
-
-        })
-        .disposed(by: disposeBag)
     }
 }
 

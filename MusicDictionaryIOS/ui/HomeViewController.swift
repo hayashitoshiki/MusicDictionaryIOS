@@ -31,39 +31,39 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        
+        //navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController!.navigationBar.isTranslucent = true
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
         searchBar.backgroundImage = UIImage()
         searchBar.textField!.backgroundColor = UIColor.gray_300
         bing()
-
-        viewModel.getArtists()
     }
     
     // 非同期処理初期化
     private func bing() {
         disposeBag.insert(
             // ボタンバリデート
-            viewModel.isCategoryButtonEnabled.asObservable()
+            viewModel.isCategoryButtonEnabled
             .subscribe(onNext: { [unowned self] value in
                 self.searchErrorView.isHidden = value }),
 
-            viewModel.isCategoryButtonEnabled.asObservable()
+            viewModel.isCategoryButtonEnabled
                 .subscribe(onNext: { [unowned self] value in
                     self.categoryButton.isEnabled = value
                     self.categoryErrorView.isHidden = value }),
             
-            viewModel.isDetailButtonEnabled.asObservable()
+            viewModel.isDetailButtonEnabled
                 .subscribe(onNext: { [unowned self] value in
                     self.detailButton.isEnabled = value
                     self.detailsErrorView.isHidden = value }),
                 
-            viewModel.isSoaringButtonEnabled.asObservable()
+            viewModel.isSoaringButtonEnabled
                 .subscribe(onNext: { [unowned self] value in
                     self.soaringButton.isEnabled = value
                     self.soaringErrorView.isHidden = value }),
             
-            viewModel.isRecommendButtonEnabled.asObservable()
+            viewModel.isRecommendButtonEnabled
                 .subscribe(onNext: { [unowned self] value in
                     self.recommendButton.isEnabled = value
                     self.recommendErrorView.isHidden = value })

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.2)
+  - Cosmos (23.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (14.0.0):
@@ -17,6 +18,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Cosmos
   - Moya/RxSwift
   - R.swift
   - RxCocoa
@@ -25,6 +27,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Cosmos
     - Moya
     - R.swift
     - R.swift.Library
@@ -34,6 +37,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
@@ -41,6 +45,6 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: ab87491a957227d0e20627b785459b3457796987
+PODFILE CHECKSUM: 743f2067368bb9a8c03ec5ea6260f798be4a164a
 
 COCOAPODS: 1.10.0.rc.1
