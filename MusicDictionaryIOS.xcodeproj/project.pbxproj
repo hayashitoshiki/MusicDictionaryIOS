@@ -35,6 +35,10 @@
 		3666CA9E251E07C8001FF648 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666CA9D251E07C8001FF648 /* ResultViewController.swift */; };
 		3666CAA2251E0802001FF648 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666CAA1251E0802001FF648 /* ResultViewModel.swift */; };
 		3666CAA4251E097D001FF648 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666CAA3251E097D001FF648 /* Status.swift */; };
+		367DB3AA253BD70900C1B0A0 /* MyPageTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB3A9253BD70900C1B0A0 /* MyPageTopViewController.swift */; };
+		367DB3AC253BD75D00C1B0A0 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367DB3AB253BD75D00C1B0A0 /* MyPage.storyboard */; };
+		367DB3AE253BDE8000C1B0A0 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB3AD253BDE8000C1B0A0 /* RoundedView.swift */; };
+		367DB3B0253BE11C00C1B0A0 /* MyPageTopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB3AF253BE11C00C1B0A0 /* MyPageTopViewModel.swift */; };
 		36916F39251ECD7400D43C34 /* ResultTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36916F38251ECD7400D43C34 /* ResultTableViewDataSource.swift */; };
 		36916F3B251ECF2D00D43C34 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36916F3A251ECF2D00D43C34 /* ResultTableViewCell.swift */; };
 		36916F3D251ED3E900D43C34 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36916F3C251ED3E900D43C34 /* R.generated.swift */; };
@@ -100,6 +104,10 @@
 		3666CA9D251E07C8001FF648 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultViewController.swift; path = home/ResultViewController.swift; sourceTree = "<group>"; };
 		3666CAA1251E0802001FF648 /* ResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultViewModel.swift; path = home/ResultViewModel.swift; sourceTree = "<group>"; };
 		3666CAA3251E097D001FF648 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		367DB3A9253BD70900C1B0A0 /* MyPageTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTopViewController.swift; sourceTree = "<group>"; };
+		367DB3AB253BD75D00C1B0A0 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		367DB3AD253BDE8000C1B0A0 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		367DB3AF253BE11C00C1B0A0 /* MyPageTopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTopViewModel.swift; sourceTree = "<group>"; };
 		36916F38251ECD7400D43C34 /* ResultTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewDataSource.swift; sourceTree = "<group>"; };
 		36916F3A251ECF2D00D43C34 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		36916F3C251ED3E900D43C34 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -242,6 +250,7 @@
 				3660BD53251B1F0100ED8241 /* Main.storyboard */,
 				3660BD58251B1F0100ED8241 /* LaunchScreen.storyboard */,
 				3660BD93251B2CCC00ED8241 /* home */,
+				367DB3A8253BD69900C1B0A0 /* mypage */,
 				3666CA95251D8199001FF648 /* custom */,
 				3666CA98251DC174001FF648 /* Extension */,
 			);
@@ -295,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				3666CA96251D8228001FF648 /* RoundedButton.swift */,
+				367DB3AD253BDE8000C1B0A0 /* RoundedView.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -306,6 +316,16 @@
 				3666CA9B251DC32B001FF648 /* UIColor+Extension.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		367DB3A8253BD69900C1B0A0 /* mypage */ = {
+			isa = PBXGroup;
+			children = (
+				367DB3AB253BD75D00C1B0A0 /* MyPage.storyboard */,
+				367DB3A9253BD70900C1B0A0 /* MyPageTopViewController.swift */,
+				367DB3AF253BE11C00C1B0A0 /* MyPageTopViewModel.swift */,
+			);
+			path = mypage;
 			sourceTree = "<group>";
 		};
 		401EDC5D04FA99F417034800 /* Pods */ = {
@@ -452,6 +472,7 @@
 				3666CA8D251C3172001FF648 /* Home.storyboard in Resources */,
 				3666CA83251B7A5A001FF648 /* app-staging.plist in Resources */,
 				3660BD5A251B1F0100ED8241 /* LaunchScreen.storyboard in Resources */,
+				367DB3AC253BD75D00C1B0A0 /* MyPage.storyboard in Resources */,
 				3660BD57251B1F0100ED8241 /* Assets.xcassets in Resources */,
 				3666CA82251B7A5A001FF648 /* app-develop.plist in Resources */,
 				3666CA8B251B82BA001FF648 /* app.plist in Resources */,
@@ -622,6 +643,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367DB3B0253BE11C00C1B0A0 /* MyPageTopViewModel.swift in Sources */,
 				36916F3B251ECF2D00D43C34 /* ResultTableViewCell.swift in Sources */,
 				3660BD86251B206100ED8241 /* ErrorUseCase.swift in Sources */,
 				3660BD82251B201C00ED8241 /* Provider.swift in Sources */,
@@ -630,11 +652,13 @@
 				36916F39251ECD7400D43C34 /* ResultTableViewDataSource.swift in Sources */,
 				3666CA9C251DC32B001FF648 /* UIColor+Extension.swift in Sources */,
 				3666CA97251D8228001FF648 /* RoundedButton.swift in Sources */,
+				367DB3AE253BDE8000C1B0A0 /* RoundedView.swift in Sources */,
 				3666CA8F251C7954001FF648 /* UserDefaultsRepository.swift in Sources */,
 				36916F3D251ED3E900D43C34 /* R.generated.swift in Sources */,
 				3660BD84251B203500ED8241 /* MoyaCacheablePlugin.swift in Sources */,
 				3666CAA2251E0802001FF648 /* ResultViewModel.swift in Sources */,
 				3666CA9A251DC1BD001FF648 /* UISearchBar+Extension.swift in Sources */,
+				367DB3AA253BD70900C1B0A0 /* MyPageTopViewController.swift in Sources */,
 				3660BD52251B1F0000ED8241 /* ViewController.swift in Sources */,
 				3666CAA4251E097D001FF648 /* Status.swift in Sources */,
 				3660BD4E251B1F0000ED8241 /* AppDelegate.swift in Sources */,

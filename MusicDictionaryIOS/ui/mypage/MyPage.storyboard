@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="61D-tf-Kds">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Page Top View Controller-->
+        <scene sceneID="gye-PC-UZg">
+            <objects>
+                <viewController id="1lc-gI-Flb" customClass="MyPageTopViewController" customModule="MusicDictionaryIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sss-vc-qPP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_background" translatesAutoresizingMaskIntoConstraints="NO" id="XK8-kt-TNa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0R0-l1-aN5" customClass="RoundedView" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                <rect key="frame" x="16" y="120" width="382" height="661"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivM-CZ-ODG">
+                                        <rect key="frame" x="162.5" y="16" width="57" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" name="header_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xi-mv-PsF" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="91" y="139" width="200" height="41"/>
+                                        <color key="backgroundColor" name="colorAccent"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="gIo-IM-5Gn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="アカウント情報">
+                                            <color key="titleColor" name="main_text_color"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBU-zN-QlQ" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="91" y="204" width="200" height="41"/>
+                                        <color key="backgroundColor" name="colorAccent"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Mb6-Cz-d07"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="ログアウト">
+                                            <color key="titleColor" name="main_text_color"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahp-hE-Ium" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="91" y="74" width="200" height="41"/>
+                                        <color key="backgroundColor" name="colorAccent"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="PBV-zq-6pJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="アーティスト一覧">
+                                            <color key="titleColor" name="main_text_color"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="colorPrimary"/>
+                                <constraints>
+                                    <constraint firstItem="ivM-CZ-ODG" firstAttribute="centerX" secondItem="0R0-l1-aN5" secondAttribute="centerX" id="7i4-zQ-4ww"/>
+                                    <constraint firstItem="6xi-mv-PsF" firstAttribute="top" secondItem="ahp-hE-Ium" secondAttribute="bottom" constant="24" id="NSS-Xj-rMX"/>
+                                    <constraint firstItem="NBU-zN-QlQ" firstAttribute="top" secondItem="6xi-mv-PsF" secondAttribute="bottom" constant="24" id="ZbG-Jf-uN4"/>
+                                    <constraint firstItem="6xi-mv-PsF" firstAttribute="centerX" secondItem="0R0-l1-aN5" secondAttribute="centerX" id="bws-HN-QXn"/>
+                                    <constraint firstItem="NBU-zN-QlQ" firstAttribute="centerX" secondItem="0R0-l1-aN5" secondAttribute="centerX" id="bxf-FF-wBg"/>
+                                    <constraint firstItem="ivM-CZ-ODG" firstAttribute="top" secondItem="0R0-l1-aN5" secondAttribute="top" constant="16" id="eB0-T5-gTw"/>
+                                    <constraint firstItem="ahp-hE-Ium" firstAttribute="centerX" secondItem="0R0-l1-aN5" secondAttribute="centerX" id="fC4-hE-U8j"/>
+                                    <constraint firstItem="ahp-hE-Ium" firstAttribute="top" secondItem="ivM-CZ-ODG" secondAttribute="bottom" constant="24" id="gGl-gV-lUb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zpA-Yf-Slg" firstAttribute="trailing" secondItem="0R0-l1-aN5" secondAttribute="trailing" constant="16" id="28X-DK-WQJ"/>
+                            <constraint firstItem="0R0-l1-aN5" firstAttribute="top" secondItem="zpA-Yf-Slg" secondAttribute="top" constant="32" id="JaU-wK-XcM"/>
+                            <constraint firstItem="zpA-Yf-Slg" firstAttribute="bottom" secondItem="0R0-l1-aN5" secondAttribute="bottom" constant="32" id="YuE-HU-7cZ"/>
+                            <constraint firstItem="0R0-l1-aN5" firstAttribute="leading" secondItem="zpA-Yf-Slg" secondAttribute="leading" constant="16" id="lVu-PZ-OIa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zpA-Yf-Slg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="21J-pa-1eb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZw-vo-8HD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730.43478260869574" y="-17.410714285714285"/>
+        </scene>
+        <!--MyPage-->
+        <scene sceneID="FUA-vW-Bhy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="61D-tf-Kds" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="MyPage" id="uBC-7b-pyX"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bYI-ZV-yNR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1lc-gI-Flb" kind="relationship" relationship="rootViewController" id="KTB-Jx-eRj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gih-8K-RXl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178.2608695652174" y="-17.410714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_background" width="320" height="540"/>
+        <namedColor name="colorAccent">
+            <color red="0.54509803921568623" green="0.43137254901960786" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorPrimary">
+            <color red="0.37647058823529411" green="0.49019607843137253" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="header_color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="main_text_color">
+            <color red="1" green="1" blue="1" alpha="0.87000000476837158" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
