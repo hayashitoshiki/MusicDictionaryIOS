@@ -471,6 +471,7 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "colorPrimary", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'colorPrimary' is used in storyboard 'MyPage', but couldn't be loaded.") }
           if UIKit.UIColor(named: "header_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'header_color' is used in storyboard 'MyPage', but couldn't be loaded.") }
           if UIKit.UIColor(named: "main_text_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'main_text_color' is used in storyboard 'MyPage', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "sub_text_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'sub_text_color' is used in storyboard 'MyPage', but couldn't be loaded.") }
         }
       }
 
