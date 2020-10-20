@@ -12,6 +12,7 @@ target 'MusicDictionaryIOS' do
   pod 'R.swift'
   pod 'Moya/RxSwift'
   pod 'Cosmos'
+  pod 'DLRadioButton', '~> 1.4'
 
   target 'MusicDictionaryIOSTests' do
     inherit! :search_paths

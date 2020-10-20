@@ -152,6 +152,9 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="v9R-Ve-kIZ" kind="show" id="6lj-F5-Mlu"/>
+                                        </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vgu-cF-416">
                                         <rect key="frame" x="0.0" y="147" width="382" height="514"/>
@@ -257,6 +260,716 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7CY-kC-K4Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1621.7391304347827" y="-520.3125"/>
+        </scene>
+        <!--My Page Artist Add View Controller-->
+        <scene sceneID="JFh-WF-BP5">
+            <objects>
+                <viewController id="v9R-Ve-kIZ" customClass="MyPageArtistAddViewController" customModule="MusicDictionaryIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7yi-Iz-gE1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_background" translatesAutoresizingMaskIntoConstraints="NO" id="WTY-wY-xbQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3he-7v-Hyb" customClass="RoundedView" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                <rect key="frame" x="16" y="120" width="382" height="661"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アーティスト登録" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fna-ux-AzV">
+                                        <rect key="frame" x="77.5" y="16" width="227" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" name="header_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8R-z5-Ciu" customClass="RoundedButton" customModule="MusicDictionaryIOS" customModuleProvider="target">
+                                        <rect key="frame" x="91" y="440" width="200" height="41"/>
+                                        <color key="backgroundColor" name="colorAccent"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="sE0-Q6-iwG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="追加">
+                                            <color key="titleColor" name="main_text_color"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-Bz-hdv">
+                                        <rect key="frame" x="8" y="66" width="366" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性別" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5G-Ki-OQK">
+                                        <rect key="frame" x="166.5" y="116" width="49" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="main_text_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66H-Zh-8Ys" userLabel="gender Radio Group">
+                                        <rect key="frame" x="159" y="153" width="64" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAK-ym-XsT" userLabel="Gender Radio1" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <state key="normal" image="radio_off_button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpd-r0-Mqk" userLabel="Gender Radio2" customClass="DLRadioButton">
+                                                <rect key="frame" x="40" y="0.0" width="24" height="24"/>
+                                                <state key="normal" image="radio_off_button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" name="error_text_color"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                        <color key="value" name="error_text_color"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="BAK-ym-XsT" secondAttribute="bottom" id="21I-oe-YsD"/>
+                                            <constraint firstItem="BAK-ym-XsT" firstAttribute="leading" secondItem="66H-Zh-8Ys" secondAttribute="leading" id="IG1-A4-3Ry"/>
+                                            <constraint firstAttribute="bottom" secondItem="Gpd-r0-Mqk" secondAttribute="bottom" id="KFG-X1-Aqh"/>
+                                            <constraint firstItem="Gpd-r0-Mqk" firstAttribute="top" secondItem="66H-Zh-8Ys" secondAttribute="top" id="S7s-Ft-SvY"/>
+                                            <constraint firstItem="Gpd-r0-Mqk" firstAttribute="leading" secondItem="BAK-ym-XsT" secondAttribute="trailing" constant="16" id="WOw-wR-3lg"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gpd-r0-Mqk" secondAttribute="trailing" id="ce0-YV-dfG"/>
+                                            <constraint firstItem="Gpd-r0-Mqk" firstAttribute="centerY" secondItem="BAK-ym-XsT" secondAttribute="centerY" id="kDL-GI-cGH"/>
+                                            <constraint firstAttribute="height" constant="24" id="pTo-Qm-Nkh"/>
+                                            <constraint firstItem="BAK-ym-XsT" firstAttribute="leading" secondItem="66H-Zh-8Ys" secondAttribute="leading" id="qsO-GM-513"/>
+                                            <constraint firstItem="BAK-ym-XsT" firstAttribute="top" secondItem="66H-Zh-8Ys" secondAttribute="top" id="u5D-XM-kWf"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="長さ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-e4-Cd8">
+                                        <rect key="frame" x="166.5" y="193" width="49" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="main_text_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsI-2b-Mto" userLabel="Length Radio1" customClass="DLRadioButton">
+                                        <rect key="frame" x="99" y="230" width="24" height="24"/>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naA-9X-ezC" userLabel="Length Radio2" customClass="DLRadioButton">
+                                        <rect key="frame" x="139" y="230" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="N7W-5e-kmq"/>
+                                            <constraint firstAttribute="width" constant="24" id="dgJ-si-7TJ"/>
+                                        </constraints>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmb-Qr-6Gh" customClass="DLRadioButton">
+                                        <rect key="frame" x="179" y="230" width="24" height="24"/>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhM-jQ-Jn2" customClass="DLRadioButton">
+                                        <rect key="frame" x="219" y="230" width="24" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" label="radio4"/>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQj-mQ-Uu6" userLabel="Length Radio5" customClass="DLRadioButton">
+                                        <rect key="frame" x="259" y="230" width="24" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" label="radio5"/>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高さ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWk-LU-sby">
+                                        <rect key="frame" x="166.5" y="270" width="49" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="main_text_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX6-hb-QFe" userLabel="Voice Radio1" customClass="DLRadioButton">
+                                        <rect key="frame" x="99" y="307" width="24" height="24"/>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acW-fq-1Vh" userLabel="Voice Radio2" customClass="DLRadioButton">
+                                        <rect key="frame" x="139" y="307" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="M1k-7N-Iyc"/>
+                                            <constraint firstAttribute="width" constant="24" id="aFh-rn-ac6"/>
+                                        </constraints>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2B-7e-NyI" customClass="DLRadioButton">
+                                        <rect key="frame" x="179" y="307" width="24" height="24"/>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvs-zX-o5m" customClass="DLRadioButton">
+                                        <rect key="frame" x="219" y="307" width="24" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" label="radio4"/>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yj-Su-tlJ" userLabel="Voice Radio5" customClass="DLRadioButton">
+                                        <rect key="frame" x="259" y="307" width="24" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" label="radio5"/>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歌詞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K89-iw-6oG">
+                                        <rect key="frame" x="166.5" y="347" width="49" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="main_text_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6j-6m-dpx" userLabel="Lyric Radio1" customClass="DLRadioButton">
+                                        <rect key="frame" x="99" y="384" width="24" height="24"/>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgo-0d-K0O" userLabel="Lyric Radio2" customClass="DLRadioButton">
+                                        <rect key="frame" x="139" y="384" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="SUd-n5-L9H"/>
+                                            <constraint firstAttribute="height" constant="24" id="jaK-Le-idC"/>
+                                        </constraints>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xe8-Jr-mgE" userLabel="Lyric Radio3" customClass="DLRadioButton">
+                                        <rect key="frame" x="179" y="384" width="24" height="24"/>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJI-BJ-Zij" userLabel="Lyric Radio4" customClass="DLRadioButton">
+                                        <rect key="frame" x="219" y="384" width="24" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" label="radio4"/>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6i-Vi-Y6t" userLabel="Lyric Radio5" customClass="DLRadioButton">
+                                        <rect key="frame" x="259" y="384" width="24" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" label="radio5"/>
+                                        <state key="normal" image="radio_off_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio_on_button"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                <color key="value" name="error_text_color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio_off_button"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="短い" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUB-4g-4l0">
+                                        <rect key="frame" x="54" y="230" width="41" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" name="sub_text_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="長い" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1r-9w-VW9">
+                                        <rect key="frame" x="287" y="230" width="41" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" name="sub_text_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="低い" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PB1-N0-DqG">
+                                        <rect key="frame" x="54" y="307" width="41" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" name="sub_text_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高い" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSw-Vu-2eH">
+                                        <rect key="frame" x="287" y="307" width="41" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" name="sub_text_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULs-gG-qeW">
+                                        <rect key="frame" x="54" y="384" width="41" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" name="sub_text_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="外国" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuU-AR-tc2">
+                                        <rect key="frame" x="287" y="384" width="41" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" name="sub_text_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="男" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLA-f4-1un">
+                                        <rect key="frame" x="134" y="153" width="21" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" name="sub_text_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="女" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hC7-fs-2tb">
+                                        <rect key="frame" x="227" y="153" width="21" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" name="sub_text_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="colorPrimary"/>
+                                <constraints>
+                                    <constraint firstItem="U2B-7e-NyI" firstAttribute="top" secondItem="dWk-LU-sby" secondAttribute="bottom" constant="8" id="02c-gZ-xhF"/>
+                                    <constraint firstItem="kuU-AR-tc2" firstAttribute="centerY" secondItem="ULs-gG-qeW" secondAttribute="centerY" id="0u5-Os-4EC"/>
+                                    <constraint firstItem="naA-9X-ezC" firstAttribute="centerY" secondItem="MsI-2b-Mto" secondAttribute="centerY" id="1CD-V4-u5z"/>
+                                    <constraint firstItem="8yj-Su-tlJ" firstAttribute="centerY" secondItem="PB1-N0-DqG" secondAttribute="centerY" id="1tl-qr-MdQ"/>
+                                    <constraint firstItem="NhM-jQ-Jn2" firstAttribute="centerY" secondItem="MsI-2b-Mto" secondAttribute="centerY" id="6OG-vc-Sr3"/>
+                                    <constraint firstItem="sgo-0d-K0O" firstAttribute="leading" secondItem="l6j-6m-dpx" secondAttribute="trailing" constant="16" id="8Md-mt-hcv"/>
+                                    <constraint firstItem="hC7-fs-2tb" firstAttribute="centerY" secondItem="aLA-f4-1un" secondAttribute="centerY" id="A6Y-WO-e1B"/>
+                                    <constraint firstItem="q6i-Vi-Y6t" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="CQo-Tf-UPt"/>
+                                    <constraint firstItem="K89-iw-6oG" firstAttribute="centerX" secondItem="3he-7v-Hyb" secondAttribute="centerX" id="CqK-XR-ZkC"/>
+                                    <constraint firstItem="MsI-2b-Mto" firstAttribute="centerY" secondItem="jUB-4g-4l0" secondAttribute="centerY" id="DHD-bJ-QRk"/>
+                                    <constraint firstItem="tJI-BJ-Zij" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="DQp-Xz-b7I"/>
+                                    <constraint firstItem="Xe8-Jr-mgE" firstAttribute="leading" secondItem="sgo-0d-K0O" secondAttribute="trailing" constant="16" id="DRe-mo-0cI"/>
+                                    <constraint firstItem="t5G-Ki-OQK" firstAttribute="centerX" secondItem="3he-7v-Hyb" secondAttribute="centerX" id="DUc-s5-qD2"/>
+                                    <constraint firstItem="q6i-Vi-Y6t" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="DUt-Lo-Lxh"/>
+                                    <constraint firstItem="nmb-Qr-6Gh" firstAttribute="centerX" secondItem="3he-7v-Hyb" secondAttribute="centerX" id="DfA-La-NuB"/>
+                                    <constraint firstItem="8yj-Su-tlJ" firstAttribute="centerY" secondItem="dX6-hb-QFe" secondAttribute="centerY" id="Dt4-Kr-wPq"/>
+                                    <constraint firstItem="U2B-7e-NyI" firstAttribute="leading" secondItem="acW-fq-1Vh" secondAttribute="trailing" constant="16" id="Dwd-f5-TLT"/>
+                                    <constraint firstItem="Fna-ux-AzV" firstAttribute="centerX" secondItem="3he-7v-Hyb" secondAttribute="centerX" id="FMe-ZU-40l"/>
+                                    <constraint firstItem="Fna-ux-AzV" firstAttribute="top" secondItem="3he-7v-Hyb" secondAttribute="top" constant="16" id="Fnc-9t-T3a"/>
+                                    <constraint firstItem="sgo-0d-K0O" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="GVy-YI-2hh"/>
+                                    <constraint firstItem="naA-9X-ezC" firstAttribute="leading" secondItem="MsI-2b-Mto" secondAttribute="trailing" constant="16" id="HOm-ay-rLl"/>
+                                    <constraint firstItem="66H-Zh-8Ys" firstAttribute="centerX" secondItem="3he-7v-Hyb" secondAttribute="centerX" id="IYg-ra-tqU"/>
+                                    <constraint firstItem="q6i-Vi-Y6t" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="Iiy-e8-MaE"/>
+                                    <constraint firstItem="dWk-LU-sby" firstAttribute="centerX" secondItem="3he-7v-Hyb" secondAttribute="centerX" id="Jh4-li-XGe"/>
+                                    <constraint firstItem="dX6-hb-QFe" firstAttribute="centerY" secondItem="PB1-N0-DqG" secondAttribute="centerY" id="K1f-ea-wv9"/>
+                                    <constraint firstItem="kuU-AR-tc2" firstAttribute="centerY" secondItem="ULs-gG-qeW" secondAttribute="centerY" id="LNu-Zn-dpd"/>
+                                    <constraint firstItem="Xe8-Jr-mgE" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="Lau-VP-oOy"/>
+                                    <constraint firstItem="NhM-jQ-Jn2" firstAttribute="leading" secondItem="nmb-Qr-6Gh" secondAttribute="trailing" constant="16" id="Lei-gL-vTv"/>
+                                    <constraint firstItem="wvs-zX-o5m" firstAttribute="centerY" secondItem="dX6-hb-QFe" secondAttribute="centerY" id="MFw-KJ-amZ"/>
+                                    <constraint firstItem="acW-fq-1Vh" firstAttribute="centerY" secondItem="PB1-N0-DqG" secondAttribute="centerY" id="MpK-3d-gst"/>
+                                    <constraint firstItem="dSw-Vu-2eH" firstAttribute="centerY" secondItem="PB1-N0-DqG" secondAttribute="centerY" id="NE8-Wc-8i5"/>
+                                    <constraint firstItem="sgo-0d-K0O" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="Nx9-zK-TNa"/>
+                                    <constraint firstItem="tJI-BJ-Zij" firstAttribute="leading" secondItem="Xe8-Jr-mgE" secondAttribute="trailing" constant="16" id="OfW-Gs-7ep"/>
+                                    <constraint firstItem="U2B-7e-NyI" firstAttribute="centerY" secondItem="PB1-N0-DqG" secondAttribute="centerY" id="P3q-4a-kGg"/>
+                                    <constraint firstItem="dSw-Vu-2eH" firstAttribute="centerY" secondItem="PB1-N0-DqG" secondAttribute="centerY" id="Q5s-hO-Scx"/>
+                                    <constraint firstItem="hC7-fs-2tb" firstAttribute="centerY" secondItem="aLA-f4-1un" secondAttribute="centerY" id="Qja-SX-LJ7"/>
+                                    <constraint firstItem="acW-fq-1Vh" firstAttribute="centerY" secondItem="dX6-hb-QFe" secondAttribute="centerY" id="RFl-Qg-IHE"/>
+                                    <constraint firstItem="5fW-Bz-hdv" firstAttribute="leading" secondItem="3he-7v-Hyb" secondAttribute="leading" constant="8" id="RO6-4y-WAo"/>
+                                    <constraint firstItem="66H-Zh-8Ys" firstAttribute="centerY" secondItem="aLA-f4-1un" secondAttribute="centerY" id="U5s-wk-ogB"/>
+                                    <constraint firstItem="q6i-Vi-Y6t" firstAttribute="centerY" secondItem="ULs-gG-qeW" secondAttribute="centerY" id="UCW-Xc-BgM"/>
+                                    <constraint firstItem="sgo-0d-K0O" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="UCW-jz-7Q4"/>
+                                    <constraint firstItem="NhM-jQ-Jn2" firstAttribute="centerY" secondItem="MsI-2b-Mto" secondAttribute="centerY" id="UPG-KI-DPM"/>
+                                    <constraint firstItem="MsI-2b-Mto" firstAttribute="leading" secondItem="jUB-4g-4l0" secondAttribute="trailing" constant="4" id="XRd-wo-heb"/>
+                                    <constraint firstItem="kuU-AR-tc2" firstAttribute="centerY" secondItem="ULs-gG-qeW" secondAttribute="centerY" id="XSr-ve-7xb"/>
+                                    <constraint firstItem="nmb-Qr-6Gh" firstAttribute="leading" secondItem="naA-9X-ezC" secondAttribute="trailing" constant="16" id="XXc-RK-Bf7"/>
+                                    <constraint firstItem="P8R-z5-Ciu" firstAttribute="centerX" secondItem="3he-7v-Hyb" secondAttribute="centerX" id="Xb8-kR-5v6"/>
+                                    <constraint firstItem="tJI-BJ-Zij" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="Ypm-y0-gYu"/>
+                                    <constraint firstItem="Xe8-Jr-mgE" firstAttribute="centerY" secondItem="ULs-gG-qeW" secondAttribute="centerY" id="Z10-ZN-QsX"/>
+                                    <constraint firstItem="66H-Zh-8Ys" firstAttribute="leading" secondItem="aLA-f4-1un" secondAttribute="trailing" constant="4" id="a2e-fd-bGr"/>
+                                    <constraint firstItem="U2B-7e-NyI" firstAttribute="centerX" secondItem="3he-7v-Hyb" secondAttribute="centerX" id="ae1-RG-VG0"/>
+                                    <constraint firstItem="T1r-9w-VW9" firstAttribute="centerY" secondItem="jUB-4g-4l0" secondAttribute="centerY" id="aeQ-CY-GQX"/>
+                                    <constraint firstItem="bQj-mQ-Uu6" firstAttribute="centerY" secondItem="jUB-4g-4l0" secondAttribute="centerY" id="asX-nK-ks1"/>
+                                    <constraint firstItem="acW-fq-1Vh" firstAttribute="leading" secondItem="dX6-hb-QFe" secondAttribute="trailing" constant="16" id="bQV-sT-Na4"/>
+                                    <constraint firstItem="T1r-9w-VW9" firstAttribute="leading" secondItem="bQj-mQ-Uu6" secondAttribute="trailing" constant="4" id="cRu-Kr-z7I"/>
+                                    <constraint firstItem="nmb-Qr-6Gh" firstAttribute="centerY" secondItem="jUB-4g-4l0" secondAttribute="centerY" id="cWm-xy-JAN"/>
+                                    <constraint firstItem="wvs-zX-o5m" firstAttribute="leading" secondItem="U2B-7e-NyI" secondAttribute="trailing" constant="16" id="can-Nm-Drt"/>
+                                    <constraint firstItem="wvs-zX-o5m" firstAttribute="centerY" secondItem="dX6-hb-QFe" secondAttribute="centerY" id="cza-lG-yej"/>
+                                    <constraint firstItem="acW-fq-1Vh" firstAttribute="centerY" secondItem="dX6-hb-QFe" secondAttribute="centerY" id="doa-5v-qAD"/>
+                                    <constraint firstItem="wvs-zX-o5m" firstAttribute="centerY" secondItem="PB1-N0-DqG" secondAttribute="centerY" id="eMW-Ah-tKh"/>
+                                    <constraint firstItem="dSw-Vu-2eH" firstAttribute="leading" secondItem="8yj-Su-tlJ" secondAttribute="trailing" constant="4" id="eNE-MY-76r"/>
+                                    <constraint firstItem="tJI-BJ-Zij" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="eaQ-YK-Qcm"/>
+                                    <constraint firstItem="8yj-Su-tlJ" firstAttribute="centerY" secondItem="dX6-hb-QFe" secondAttribute="centerY" id="hDu-IA-9dn"/>
+                                    <constraint firstItem="8yj-Su-tlJ" firstAttribute="centerY" secondItem="dX6-hb-QFe" secondAttribute="centerY" id="hFy-Fq-hvl"/>
+                                    <constraint firstItem="q6i-Vi-Y6t" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="haN-jY-b3Y"/>
+                                    <constraint firstItem="l6j-6m-dpx" firstAttribute="leading" secondItem="ULs-gG-qeW" secondAttribute="trailing" constant="4" id="hau-NG-gnD"/>
+                                    <constraint firstItem="NhM-jQ-Jn2" firstAttribute="centerY" secondItem="jUB-4g-4l0" secondAttribute="centerY" id="hb7-T1-hv6"/>
+                                    <constraint firstItem="P8R-z5-Ciu" firstAttribute="top" secondItem="Xe8-Jr-mgE" secondAttribute="bottom" constant="32" id="iCR-Nf-KAH"/>
+                                    <constraint firstItem="tJI-BJ-Zij" firstAttribute="centerY" secondItem="ULs-gG-qeW" secondAttribute="centerY" id="iQh-Lc-wXh"/>
+                                    <constraint firstItem="acW-fq-1Vh" firstAttribute="centerY" secondItem="dX6-hb-QFe" secondAttribute="centerY" id="ir5-xs-QjK"/>
+                                    <constraint firstItem="naA-9X-ezC" firstAttribute="centerY" secondItem="jUB-4g-4l0" secondAttribute="centerY" id="jYt-kI-sLY"/>
+                                    <constraint firstAttribute="trailing" secondItem="5fW-Bz-hdv" secondAttribute="trailing" constant="8" id="kSf-fA-04T"/>
+                                    <constraint firstItem="kuU-AR-tc2" firstAttribute="leading" secondItem="q6i-Vi-Y6t" secondAttribute="trailing" constant="4" id="kaJ-Fr-RNZ"/>
+                                    <constraint firstItem="hC7-fs-2tb" firstAttribute="leading" secondItem="66H-Zh-8Ys" secondAttribute="trailing" constant="4" id="kha-Md-3cu"/>
+                                    <constraint firstItem="2UY-e4-Cd8" firstAttribute="centerX" secondItem="3he-7v-Hyb" secondAttribute="centerX" id="kye-NU-g02"/>
+                                    <constraint firstItem="t5G-Ki-OQK" firstAttribute="top" secondItem="5fW-Bz-hdv" secondAttribute="bottom" constant="16" id="mwd-TF-lGR"/>
+                                    <constraint firstItem="2UY-e4-Cd8" firstAttribute="top" secondItem="66H-Zh-8Ys" secondAttribute="bottom" constant="16" id="nnF-hu-B0i"/>
+                                    <constraint firstItem="tJI-BJ-Zij" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="nnh-dV-4Xc"/>
+                                    <constraint firstItem="dWk-LU-sby" firstAttribute="top" secondItem="nmb-Qr-6Gh" secondAttribute="bottom" constant="16" id="oWw-ge-als"/>
+                                    <constraint firstItem="q6i-Vi-Y6t" firstAttribute="leading" secondItem="tJI-BJ-Zij" secondAttribute="trailing" constant="16" id="oZy-di-MJK"/>
+                                    <constraint firstItem="nmb-Qr-6Gh" firstAttribute="centerY" secondItem="MsI-2b-Mto" secondAttribute="centerY" id="ovK-am-LHe"/>
+                                    <constraint firstItem="bQj-mQ-Uu6" firstAttribute="leading" secondItem="NhM-jQ-Jn2" secondAttribute="trailing" constant="16" id="owu-56-2xK"/>
+                                    <constraint firstItem="wvs-zX-o5m" firstAttribute="centerY" secondItem="dX6-hb-QFe" secondAttribute="centerY" id="qNU-RQ-cWi"/>
+                                    <constraint firstItem="Xe8-Jr-mgE" firstAttribute="centerX" secondItem="3he-7v-Hyb" secondAttribute="centerX" id="qXo-ID-5QG"/>
+                                    <constraint firstItem="66H-Zh-8Ys" firstAttribute="top" secondItem="t5G-Ki-OQK" secondAttribute="bottom" constant="8" id="r3p-ic-Ek6"/>
+                                    <constraint firstItem="nmb-Qr-6Gh" firstAttribute="top" secondItem="2UY-e4-Cd8" secondAttribute="bottom" constant="8" id="uFe-oB-o6a"/>
+                                    <constraint firstItem="U2B-7e-NyI" firstAttribute="centerY" secondItem="dX6-hb-QFe" secondAttribute="centerY" id="uJl-2P-r33"/>
+                                    <constraint firstItem="sgo-0d-K0O" firstAttribute="centerY" secondItem="l6j-6m-dpx" secondAttribute="centerY" id="vLZ-Rl-ZTI"/>
+                                    <constraint firstItem="Xe8-Jr-mgE" firstAttribute="top" secondItem="K89-iw-6oG" secondAttribute="bottom" constant="8" id="vaT-BP-Pc8"/>
+                                    <constraint firstItem="5fW-Bz-hdv" firstAttribute="top" secondItem="Fna-ux-AzV" secondAttribute="bottom" constant="16" id="wTP-yB-gLa"/>
+                                    <constraint firstItem="8yj-Su-tlJ" firstAttribute="leading" secondItem="wvs-zX-o5m" secondAttribute="trailing" constant="16" id="wgL-Df-p1M"/>
+                                    <constraint firstItem="naA-9X-ezC" firstAttribute="centerY" secondItem="MsI-2b-Mto" secondAttribute="centerY" id="whb-0W-FXB"/>
+                                    <constraint firstItem="K89-iw-6oG" firstAttribute="top" secondItem="U2B-7e-NyI" secondAttribute="bottom" constant="16" id="y4w-wn-JoZ"/>
+                                    <constraint firstItem="bQj-mQ-Uu6" firstAttribute="centerY" secondItem="MsI-2b-Mto" secondAttribute="centerY" id="yE6-F3-oUe"/>
+                                    <constraint firstItem="dX6-hb-QFe" firstAttribute="leading" secondItem="PB1-N0-DqG" secondAttribute="trailing" constant="4" id="yfc-vy-W2b"/>
+                                    <constraint firstItem="l6j-6m-dpx" firstAttribute="centerY" secondItem="ULs-gG-qeW" secondAttribute="centerY" id="zdk-Ja-GgJ"/>
+                                    <constraint firstItem="bQj-mQ-Uu6" firstAttribute="centerY" secondItem="MsI-2b-Mto" secondAttribute="centerY" id="ztG-sC-FWO"/>
+                                    <constraint firstItem="sgo-0d-K0O" firstAttribute="centerY" secondItem="ULs-gG-qeW" secondAttribute="centerY" id="zxf-Ff-oWV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WTY-wY-xbQ" firstAttribute="leading" secondItem="JB4-CF-2hT" secondAttribute="leading" id="7np-vZ-I7h"/>
+                            <constraint firstItem="WTY-wY-xbQ" firstAttribute="bottom" secondItem="JB4-CF-2hT" secondAttribute="bottom" id="RA9-by-iwz"/>
+                            <constraint firstItem="JB4-CF-2hT" firstAttribute="trailing" secondItem="3he-7v-Hyb" secondAttribute="trailing" constant="16" id="SHA-NB-K5a"/>
+                            <constraint firstItem="3he-7v-Hyb" firstAttribute="top" secondItem="JB4-CF-2hT" secondAttribute="top" constant="32" id="afb-rD-uYf"/>
+                            <constraint firstItem="WTY-wY-xbQ" firstAttribute="top" secondItem="JB4-CF-2hT" secondAttribute="top" id="hXb-3D-JHM"/>
+                            <constraint firstItem="WTY-wY-xbQ" firstAttribute="trailing" secondItem="JB4-CF-2hT" secondAttribute="trailing" id="iR3-CM-OQv"/>
+                            <constraint firstItem="3he-7v-Hyb" firstAttribute="leading" secondItem="JB4-CF-2hT" secondAttribute="leading" constant="16" id="wqO-sD-kF7"/>
+                            <constraint firstItem="JB4-CF-2hT" firstAttribute="bottom" secondItem="3he-7v-Hyb" secondAttribute="bottom" constant="32" id="yUj-G9-F17"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JB4-CF-2hT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AYz-3T-8O7"/>
+                    <connections>
+                        <outlet property="genderRadio1" destination="BAK-ym-XsT" id="liJ-aK-WmS"/>
+                        <outlet property="genderRadio2" destination="Gpd-r0-Mqk" id="F4a-Rq-vcE"/>
+                        <outlet property="lengthRadio1" destination="MsI-2b-Mto" id="Gyx-vg-psm"/>
+                        <outlet property="lengthRadio2" destination="naA-9X-ezC" id="gLK-6i-zKF"/>
+                        <outlet property="lengthRadio3" destination="nmb-Qr-6Gh" id="mjN-Fa-0Qm"/>
+                        <outlet property="lengthRadio4" destination="NhM-jQ-Jn2" id="8Nc-cg-0jd"/>
+                        <outlet property="lengthRadio5" destination="bQj-mQ-Uu6" id="Bv5-Ap-SOJ"/>
+                        <outlet property="lyricRadio1" destination="l6j-6m-dpx" id="fbJ-Ee-hJ5"/>
+                        <outlet property="lyricRadio2" destination="sgo-0d-K0O" id="wLk-5G-4Wo"/>
+                        <outlet property="lyricRadio3" destination="Xe8-Jr-mgE" id="p2p-u3-XEF"/>
+                        <outlet property="lyricRadio4" destination="tJI-BJ-Zij" id="gFn-tT-4QG"/>
+                        <outlet property="lyricRadio5" destination="q6i-Vi-Y6t" id="4D5-cS-7d8"/>
+                        <outlet property="voiceRadio1" destination="dX6-hb-QFe" id="O2z-pO-myf"/>
+                        <outlet property="voiceRadio2" destination="acW-fq-1Vh" id="DaT-ib-fPu"/>
+                        <outlet property="voiceRadio3" destination="U2B-7e-NyI" id="4ZK-Hh-9Tw"/>
+                        <outlet property="voiceRadio4" destination="wvs-zX-o5m" id="bBk-b8-l6g"/>
+                        <outlet property="voiceRadio5" destination="8yj-Su-tlJ" id="Sgn-uq-K4G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCh-AS-Dkr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2476.811594202899" y="-520.3125"/>
         </scene>
         <!--My Page User View Controller-->
         <scene sceneID="zRc-7H-zPc">
@@ -437,11 +1150,16 @@
     </scenes>
     <resources>
         <image name="home_background" width="320" height="540"/>
+        <image name="radio_off_button" width="24" height="24"/>
+        <image name="radio_on_button" width="24" height="24"/>
         <namedColor name="colorAccent">
             <color red="0.54509803921568623" green="0.43137254901960786" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="colorPrimary">
             <color red="0.37647058823529411" green="0.49019607843137253" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="error_text_color">
+            <color red="0.69019607843137254" green="0.0" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="header_color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -311,15 +311,33 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
     /// Image `home_background`.
     static let home_background = Rswift.ImageResource(bundle: R.hostingBundle, name: "home_background")
+    /// Image `radio_off_button`.
+    static let radio_off_button = Rswift.ImageResource(bundle: R.hostingBundle, name: "radio_off_button")
+    /// Image `radio_on_button`.
+    static let radio_on_button = Rswift.ImageResource(bundle: R.hostingBundle, name: "radio_on_button")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "home_background", bundle: ..., traitCollection: ...)`
     static func home_background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.home_background, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "radio_off_button", bundle: ..., traitCollection: ...)`
+    static func radio_off_button(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.radio_off_button, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "radio_on_button", bundle: ..., traitCollection: ...)`
+    static func radio_on_button(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.radio_on_button, compatibleWith: traitCollection)
     }
     #endif
 
@@ -468,9 +486,12 @@ struct _R: Rswift.Validatable {
 
       static func validate() throws {
         if UIKit.UIImage(named: "home_background", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'home_background' is used in storyboard 'MyPage', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "radio_off_button", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'radio_off_button' is used in storyboard 'MyPage', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "radio_on_button", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'radio_on_button' is used in storyboard 'MyPage', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
           if UIKit.UIColor(named: "colorAccent", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'colorAccent' is used in storyboard 'MyPage', but couldn't be loaded.") }
           if UIKit.UIColor(named: "colorPrimary", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'colorPrimary' is used in storyboard 'MyPage', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "error_text_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'error_text_color' is used in storyboard 'MyPage', but couldn't be loaded.") }
           if UIKit.UIColor(named: "header_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'header_color' is used in storyboard 'MyPage', but couldn't be loaded.") }
           if UIKit.UIColor(named: "main_text_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'main_text_color' is used in storyboard 'MyPage', but couldn't be loaded.") }
           if UIKit.UIColor(named: "sub_text_color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'sub_text_color' is used in storyboard 'MyPage', but couldn't be loaded.") }

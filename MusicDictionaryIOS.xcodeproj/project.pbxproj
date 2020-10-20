@@ -48,6 +48,9 @@
 		367DB3DC253C539500C1B0A0 /* ResultTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB3D8253C539500C1B0A0 /* ResultTableViewDataSource.swift */; };
 		367DB3DD253C539500C1B0A0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB3D9253C539500C1B0A0 /* HomeViewController.swift */; };
 		367DB3DE253C539500C1B0A0 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB3DA253C539500C1B0A0 /* ResultTableViewCell.swift */; };
+		367DB3E0253C70E200C1B0A0 /* MyCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB3DF253C70E200C1B0A0 /* MyCheckButton.swift */; };
+		367DB3E2253DD27000C1B0A0 /* MyPageArtistAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB3E1253DD27000C1B0A0 /* MyPageArtistAddViewController.swift */; };
+		367DB3E4253DDAA300C1B0A0 /* MyPageArtistAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB3E3253DDAA300C1B0A0 /* MyPageArtistAddViewModel.swift */; };
 		36916F3D251ED3E900D43C34 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36916F3C251ED3E900D43C34 /* R.generated.swift */; };
 		C8917F6FF597D69FCE9EB77B /* Pods_MusicDictionaryIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19327F682E6FBE5B3A22B78 /* Pods_MusicDictionaryIOSTests.framework */; };
 		CD526F9AA34C80C3A3FB1AF2 /* Pods_MusicDictionaryIOS_MusicDictionaryIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEF1E05683601493C1F9F5B /* Pods_MusicDictionaryIOS_MusicDictionaryIOSUITests.framework */; };
@@ -124,6 +127,9 @@
 		367DB3D8253C539500C1B0A0 /* ResultTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTableViewDataSource.swift; path = home/ResultTableViewDataSource.swift; sourceTree = "<group>"; };
 		367DB3D9253C539500C1B0A0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = home/HomeViewController.swift; sourceTree = "<group>"; };
 		367DB3DA253C539500C1B0A0 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = home/ResultTableViewCell.swift; sourceTree = "<group>"; };
+		367DB3DF253C70E200C1B0A0 /* MyCheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCheckButton.swift; sourceTree = "<group>"; };
+		367DB3E1253DD27000C1B0A0 /* MyPageArtistAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageArtistAddViewController.swift; sourceTree = "<group>"; };
+		367DB3E3253DDAA300C1B0A0 /* MyPageArtistAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageArtistAddViewModel.swift; sourceTree = "<group>"; };
 		36916F3C251ED3E900D43C34 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7DAEA2F9F762013C1DA407B9 /* Pods-MusicDictionaryIOS.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicDictionaryIOS.staging.xcconfig"; path = "Target Support Files/Pods-MusicDictionaryIOS/Pods-MusicDictionaryIOS.staging.xcconfig"; sourceTree = "<group>"; };
 		9163A1BFBC8D4E76BB1EF619 /* Pods-MusicDictionaryIOSTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicDictionaryIOSTests.staging.xcconfig"; path = "Target Support Files/Pods-MusicDictionaryIOSTests/Pods-MusicDictionaryIOSTests.staging.xcconfig"; sourceTree = "<group>"; };
@@ -320,6 +326,7 @@
 			children = (
 				3666CA96251D8228001FF648 /* RoundedButton.swift */,
 				367DB3AD253BDE8000C1B0A0 /* RoundedView.swift */,
+				367DB3DF253C70E200C1B0A0 /* MyCheckButton.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -345,6 +352,8 @@
 				367DB3D1253C4FB400C1B0A0 /* MyPageArtistViewModel.swift */,
 				367DB3CB253C4DFB00C1B0A0 /* MyPageArtistTableViewCell.swift */,
 				367DB3CD253C4EA200C1B0A0 /* MyPageArtistTableViewDataSource.swift */,
+				367DB3E1253DD27000C1B0A0 /* MyPageArtistAddViewController.swift */,
+				367DB3E3253DDAA300C1B0A0 /* MyPageArtistAddViewModel.swift */,
 			);
 			path = mypage;
 			sourceTree = "<group>";
@@ -664,6 +673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				367DB3E0253C70E200C1B0A0 /* MyCheckButton.swift in Sources */,
 				367DB3B0253BE11C00C1B0A0 /* MyPageTopViewModel.swift in Sources */,
 				367DB3B4253BE73200C1B0A0 /* MyPageUserViewModel.swift in Sources */,
 				367DB3DD253C539500C1B0A0 /* HomeViewController.swift in Sources */,
@@ -674,6 +684,7 @@
 				367DB3C0253BF49100C1B0A0 /* PropertyUtil.swift in Sources */,
 				367DB3D6253C538400C1B0A0 /* UIColor+Extension.swift in Sources */,
 				3666CA97251D8228001FF648 /* RoundedButton.swift in Sources */,
+				367DB3E4253DDAA300C1B0A0 /* MyPageArtistAddViewModel.swift in Sources */,
 				367DB3AE253BDE8000C1B0A0 /* RoundedView.swift in Sources */,
 				367DB3D5253C538400C1B0A0 /* UISearchBar+Extension.swift in Sources */,
 				367DB3C9253BF4C700C1B0A0 /* ErrorUseCase.swift in Sources */,
@@ -683,6 +694,7 @@
 				367DB3DB253C539500C1B0A0 /* HomeViewModel.swift in Sources */,
 				367DB3C7253BF4C700C1B0A0 /* MoyaCacheablePlugin.swift in Sources */,
 				367DB3AA253BD70900C1B0A0 /* MyPageTopViewController.swift in Sources */,
+				367DB3E2253DD27000C1B0A0 /* MyPageArtistAddViewController.swift in Sources */,
 				367DB3D0253C4F9100C1B0A0 /* MyPageArtistViewController.swift in Sources */,
 				3660BD52251B1F0000ED8241 /* ViewController.swift in Sources */,
 				3660BD4E251B1F0000ED8241 /* AppDelegate.swift in Sources */,
